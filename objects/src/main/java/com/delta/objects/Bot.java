@@ -10,8 +10,8 @@ public class Bot {
 
     private String name = "Robot";
 
-    protected void talk (String aString) {
-        Log.e(getName(), aString);
+    public void talk (String aString) {
+        Log.e(getName()+ ": ", aString);
     }
 
     public String getName() {

@@ -23,4 +23,9 @@ public class Joke {
     public void setJokePunchline(String jokePunchline) {
         this.jokePunchline = jokePunchline;
     }
+
+    public Joke(String jokeSetup, String jokePunchline) {
+        this.jokeSetup = jokeSetup;
+        this.jokePunchline = jokePunchline;
+    }
 }

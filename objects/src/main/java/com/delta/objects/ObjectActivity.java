@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.Locale;
 
 public class ObjectActivity extends Activity{
 
@@ -39,5 +38,10 @@ public class ObjectActivity extends Activity{
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    ComedianBot cB = new ComedianBot();
+
+
 
 }
