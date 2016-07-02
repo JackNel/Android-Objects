@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 
 public class ObjectActivity extends Activity{
 
@@ -15,6 +17,9 @@ public class ObjectActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_object);
 
+        ArrayList<Joke> someJokes = JokeWriter.getJokeListOne();
+        JokeBot jokeBot = new JokeBot(someJokes);
+        jokeBot.tellJoke();
 
     }
 
@@ -38,14 +43,4 @@ public class ObjectActivity extends Activity{
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-    public static void main(String[] args) {
-        Bot bot = new Bot();
-        bot.talk("Hello");
-    }
-
-
-
-
 }

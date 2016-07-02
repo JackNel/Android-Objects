@@ -20,6 +20,6 @@ public class Bot {
     }
 
     protected void talk (String aString) {
-        Log.e(getName()+ ": ", aString);
+        Log.e(getName(), aString);
     }
 }

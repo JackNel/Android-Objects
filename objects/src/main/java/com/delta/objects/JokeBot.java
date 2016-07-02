@@ -11,14 +11,6 @@ public class JokeBot extends Bot {
     private ArrayList<Joke> myJokes = null;
 
     public ArrayList<Joke> getMyJokes() {
-        Random r = new Random();
-        int i = r.nextInt(1);
-        if(i == 0){
-            myJokes = JokeWriter.getJokeListOne();
-        }
-        else {
-            myJokes = JokeWriter.getJokeListTwo();
-        }
         return myJokes;
     }
 
@@ -35,10 +27,12 @@ public class JokeBot extends Bot {
         talk(aJoke.getJokePunchline());
     }
 
-//    public void tellJoke () {
-//        Random r = new Random();
-//        int i = r.nextInt(myJokes.size() + 1);
-//        Joke jokeToTell = myJokes.get(i);
-//        sayJoke(jokeToTell.getJokeSetup(), jokeToTell.getJokePunchline());
-//    }
+    protected void tellJoke() {
+        Double randomDub = new Double(Math.random() * myJokes.size());
+        int randomInt = randomDub.intValue();
+
+        Joke myJoke = myJokes.get(randomInt);
+        sayJoke(myJoke);
+    }
+
 }
