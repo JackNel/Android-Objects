@@ -40,7 +40,11 @@ public class ObjectActivity extends Activity{
     }
 
 
-    ComedianBot cB = new ComedianBot();
+    public static void main(String[] args) {
+        Bot bot = new Bot();
+        bot.talk("Hello");
+    }
+
 
 
 

@@ -6,13 +6,10 @@ import android.util.Log;
  * Created by Jack on 6/25/16.
  */
 public class Bot {
-    private final String creator = "Jack";
+
+    public final static String creator = "Jack";
 
     private String name = "Robot";
-
-    public void talk (String aString) {
-        Log.e(getName()+ ": ", aString);
-    }
 
     public String getName() {
         return name;
@@ -20,5 +17,9 @@ public class Bot {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    protected void talk (String aString) {
+        Log.e(getName()+ ": ", aString);
     }
 }

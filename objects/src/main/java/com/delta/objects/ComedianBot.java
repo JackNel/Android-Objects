@@ -14,23 +14,13 @@ public class ComedianBot extends JokeBot {
         super(myJokes);
     }
 
-    public ComedianBot() {
-    }
-
-    public void performShow(){
-        Random r = new Random();
-        int i = r.nextInt(1);
-        if(i == 0){
-            myJokes = JokeWriter.getJokeListOne();
-        }
-        else {
-            myJokes = JokeWriter.getJokeListTwo();
-        }
-
-        talk("Welcome to the Show!");
-        super.tellJoke();
-        super.tellJoke();
-        super.tellJoke();
-        talk("That's all folks! Thanks and goodnight!");
-    }
+//    public void performShow(){
+//
+//
+//        talk("Welcome to the Show!");
+//        super.tellJoke();
+//        super.tellJoke();
+//        super.tellJoke();
+//        talk("That's all folks! Thanks and goodnight!");
+//    }
 }
