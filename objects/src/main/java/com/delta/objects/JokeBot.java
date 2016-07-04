@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class JokeBot extends Bot {
 
-    private ArrayList<Joke> myJokes = null;
+    public static ArrayList<Joke> myJokes = null;
 
     public ArrayList<Joke> getMyJokes() {
         return myJokes;

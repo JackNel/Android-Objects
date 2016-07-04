@@ -10,17 +10,25 @@ import java.util.Random;
  */
 public class ComedianBot extends JokeBot {
 
-    public ComedianBot(ArrayList<Joke> myJokes) {
-        super(myJokes);
+    public ComedianBot(String aName) {
+        super(null);
+        setName(aName);
+        myJokes = JokeWriter.getJokeListTwo();
     }
 
-//    public void performShow(){
-//
-//
-//        talk("Welcome to the Show!");
-//        super.tellJoke();
-//        super.tellJoke();
-//        super.tellJoke();
-//        talk("That's all folks! Thanks and goodnight!");
-//    }
+    @Override
+    protected void sayJoke(Joke aJoke) {
+        talk(aJoke.getJokeSetup() + "..." + aJoke.getJokePunchline());
+    }
+
+    public void performShow(){
+
+        talk("Welcome to the Show!, My name is " + getName());
+
+        for (Joke joke : myJokes) {
+            sayJoke(joke);
+        }
+
+        talk("That's all folks! Thanks and goodnight!");
+    }
 }

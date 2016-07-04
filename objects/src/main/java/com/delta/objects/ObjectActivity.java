@@ -20,7 +20,10 @@ public class ObjectActivity extends Activity{
         ArrayList<Joke> someJokes = JokeWriter.getJokeListOne();
         JokeBot jokeBot = new JokeBot(someJokes);
         jokeBot.tellJoke();
+        jokeBot.setMyJokes(JokeWriter.getJokeListTwo());
 
+        ComedianBot comedianBot = new ComedianBot("Comedian Bot");
+        comedianBot.performShow();
     }
 
 
